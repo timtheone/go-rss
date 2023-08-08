@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "8080:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
